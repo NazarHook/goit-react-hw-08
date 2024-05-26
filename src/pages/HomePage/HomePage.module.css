@@ -1,0 +1,12 @@
+.msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
