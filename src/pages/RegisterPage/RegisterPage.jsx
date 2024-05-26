@@ -1,46 +1,10 @@
-import { Formik, Form, Field } from "formik"
+import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
 import css from './RegisterPage.module.css'
-import {toast} from 'react-hot-toast'
-import { nanoid } from "@reduxjs/toolkit"
-import { useDispatch } from "react-redux"
-import { signUp } from "../../redux/auth/operations"
 export default function RegisterPage() {
-    const dispatch = useDispatch()
-    const nameId = nanoid()
-    const emailId = nanoid()
-    const passwordId = nanoid()
-    const initialValues = {
-        name: '',
-        email: '',
-        password: ''
-    }
-    const handleSubmit = (values, actions, event) => {
-          dispatch(signUp(values))
-          .unwrap()
-          .then(reponse => {
-            console.log(reponse);
-            toast.success("Success!!!");
-          })
-          .catch(error => {
-            console.log(error);
-          });
-        actions.resetForm();
-    }
-    return (
-       <Formik
-       initialValues={initialValues}
-        onSubmit={handleSubmit}
-        >
-         <Form className={css.form}>
-            <label htmlFor={nameId}>Name</label>
-            <Field type='text' name='name' id={nameId}></Field>
-            <label htmlFor={emailId}>Email</label>
-            <Field type='email' name='email' id={emailId}></Field>
-            <label htmlFor={passwordId}>Password</label>
-            <Field type='password' name='password' id={passwordId}></Field>
-            <button type="submit">Register</button>
-        </Form>
-       </Formik>
-    )
-
+  return (
+    <div>
+    <p className={css.text}>Register your page</p>
+    <RegistrationForm></RegistrationForm>
+</div>
+  ) 
 }

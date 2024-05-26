@@ -1,0 +1,11 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+    border: 1px solid grey;
+}
+.error{
+    color: orangered;
+    font-size: small;
+}

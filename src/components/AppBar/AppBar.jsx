@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import { selectIsLoggedIn } from '../../redux/auth/selectors'
-import css from "./Header.module.css";
+import css from "./AppBar.module.css";
 import Navigation from "../Navigation/Navigation";
-import UserNav from "../UserNav/UserNav";
+import UserNav from "../UserMenu/UserMenu";
 import AuthNav from "../AuthNav/AuthNav";
 export default function Header() {
     const isLoggedIn = useSelector(state => state.auth.isLoggedIn)

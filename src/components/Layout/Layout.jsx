@@ -1,9 +1,9 @@
-import Header from "../Header/Header";
+import AppBar from "../AppBar/AppBar";
 import css from './Layout.module.css'
 export default function Layout({children}) {
     return (
         <div className={css.container}>
-            <Header></Header>
+            <AppBar></AppBar>
             {children}
         </div>
     )
